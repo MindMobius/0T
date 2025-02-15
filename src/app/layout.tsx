@@ -26,8 +26,8 @@ const fusionPixel = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "魔轨世界",
-  description: "魔轨世界信息站",
+  title: "魔轨纪元 巴啦面板",
+  description: "魔轨纪元信息中心 by巴啦",
 };
 
 export default function RootLayout({

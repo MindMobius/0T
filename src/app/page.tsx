@@ -1,11 +1,15 @@
 import { FC } from 'react'
+import StatusBar from '@/components/StatusBar'
+import GameMap from '@/components/GameMap'
 
 const Home: FC = () => {
   return (
-    <main className="min-h-screen p-4 font-pixel">
-      <h1 className="nes-text mb-8">魔轨世界</h1>
+    <main className="min-h-screen p-4 font-pixel max-w-4xl mx-auto">
+      <h1 className="nes-text mb-8">巴啦面板</h1>
+      <StatusBar />
+
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="space-y-6">
         {/* 魔轨新闻 */}
         <section className="nes-container with-title">
           <h2 className="title">魔轨新闻</h2>
@@ -18,18 +22,18 @@ const Home: FC = () => {
           </div>
         </section>
 
-        {/* 贾德市集 */}
+        {/* 市集 */}
         <section className="nes-container with-title">
-          <h2 className="title">贾德市集</h2>
+          <h2 className="title">市集</h2>
           <div>
             {/* TODO: 接入价格数据 */}
             <p>资源价格走势图表将显示在这里...</p>
           </div>
         </section>
 
-        {/* 广而告之 */}
+        {/* 公共牌 */}
         <section className="nes-container with-title">
-          <h2 className="title">广而告之</h2>
+          <h2 className="title">公共牌</h2>
           <div className="space-y-4">
             {/* TODO: 接入委托和求购数据 */}
             <div>
@@ -40,6 +44,18 @@ const Home: FC = () => {
               <h3>资源求购</h3>
               <p>求购信息将显示在这里...</p>
             </div>
+            <div>
+              <h3>商品促销</h3>
+              <p>促销信息将显示在这里...</p>
+            </div>
+          </div>
+        </section>
+
+        {/* 信息 */}
+        <section className="nes-container with-title">
+          <h2 className="title">地图</h2>
+          <div className="space-y-4">
+            <GameMap />
           </div>
         </section>
       </div>
