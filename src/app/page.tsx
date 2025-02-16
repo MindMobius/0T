@@ -2,6 +2,7 @@ import { FC } from 'react'
 import StatusBar from '@/components/StatusBar'
 import NewsItem, { generateDailyNews, generateBreakingNews } from '@/components/NewsItem'
 import Market from '@/components/Market'
+import PublicBoard from '@/components/PublicBoard'
 
 
 const Home: FC = () => {
@@ -37,31 +38,18 @@ const Home: FC = () => {
           </div>
         </section>
 
+        {/* 公共牌 */}
+        <section className="nes-container with-title">
+          <h2 className="title">公共牌</h2>
+          <PublicBoard />
+        </section>
+
         {/* 市集 */}
         <section className="nes-container with-title">
           <h2 className="title">市集</h2>
           <Market />
         </section>
 
-        {/* 公共牌 */}
-        <section className="nes-container with-title">
-          <h2 className="title">公共牌</h2>
-          <div className="space-y-4">
-        
-            <div>
-              <h3>委托任务</h3>
-              <p>任务列表将显示在这里...</p>
-            </div>
-            <div>
-              <h3>资源求购</h3>
-              <p>求购信息将显示在这里...</p>
-            </div>
-            <div>
-              <h3>商品促销</h3>
-              <p>促销信息将显示在这里...</p>
-            </div>
-          </div>
-        </section>
         <StatusBar />
       </div>
     </main>

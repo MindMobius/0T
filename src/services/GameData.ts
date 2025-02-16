@@ -26,6 +26,9 @@ type GameDataType = {
       monster: GameElement[]
       boss: GameElement[]
     }
+    words: {
+      modifier: GameElement[]
+    }
   }
 }
 
@@ -56,7 +59,11 @@ export class GameData {
     return elements[Math.floor(Math.random() * elements.length)].name
   }
   
-  public getRandomResource(): string {
+  public getRandomModifier(): string {
+    return this.getRandomElement('words', 'modifier')
+  }
+
+  public getRandomCurrency(): string {
     return this.getRandomElement('resources', 'currency')
   }
 
@@ -70,6 +77,10 @@ export class GameData {
 
   public getRandomArmor(): string {
     return this.getRandomElement('resources', 'armor')
+  }
+
+  public getRandomToken(): string {
+    return this.getRandomElement('resources', 'token')
   }
     
   public getRandomCity(): string {
@@ -90,6 +101,11 @@ export class GameData {
 
   public getRandomBoss(): string {
     return this.getRandomElement('characters', 'boss')
+  }
+
+  public getRandomNPCWithId(): GameElement {
+    const npcs = this.data.characters.npc;
+    return npcs[Math.floor(Math.random() * npcs.length)];
   }
 }
 
