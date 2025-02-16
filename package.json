@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.5.0",
     "nes.css": "^2.2.1",
     "next": "14.2.16",
     "react": "^18",

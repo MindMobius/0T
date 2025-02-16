@@ -17,9 +17,9 @@
           {"id": 7, "name": "雅各布斯"},
           {"id": 8, "name": "托格"},
           {"id": 9, "name": "亥伯龙"},
-          {"id": 10, "name": "S&S Munitions"},
-          {"id": 11, "name": "Gearbox"},
-          {"id": 12, "name": "Anshin"}
+          {"id": 10, "name": "S&S 弹药"},
+          {"id": 11, "name": "齿轮箱"},
+          {"id": 12, "name": "安心"}
         ],
         "construct": [
           {"id": 1, "name": "集市"},
