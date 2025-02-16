@@ -3,15 +3,17 @@ import StatusBar from '@/components/StatusBar'
 import NewsItem, { generateDailyNews, generateBreakingNews } from '@/components/NewsItem'
 import Market from '@/components/Market'
 import PublicBoard from '@/components/PublicBoard'
+import RefreshButton from '@/components/RefreshButton'
 
 
 const Home: FC = () => {
 
   return (
     <main className="min-h-screen p-4 font-pixel max-w-4xl mx-auto">
-      <h1 className="nes-text mb-8">巴啦面板</h1>
- 
-
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="nes-text">巴啦面板</h1>
+        <RefreshButton />
+      </div>
       
       <div className="space-y-6">
         {/* 魔轨新闻 */}

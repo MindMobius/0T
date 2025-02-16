@@ -1,13 +1,12 @@
 import { FC } from 'react'
 import { gameData } from '@/services/GameData'
-import { faker } from '@faker-js/faker/locale/zh_CN'
 
 type Mission = {
   id: string
   title: string
   reward: string
   location: string
-  npcId: string
+  npcId: number
 }
 
 type ResourceRequest = {
@@ -16,7 +15,7 @@ type ResourceRequest = {
   price: number
   quantity: number
   requester: string
-  requesterId: string
+  requesterId: number
 }
 
 type Promotion = {
@@ -25,11 +24,6 @@ type Promotion = {
   discount: number
   vendor: string
   location: string
-}
-
-type GameElementWithId = {
-  id: string
-  name: string
 }
 
 const generateMissions = (count: number): Mission[] => {
