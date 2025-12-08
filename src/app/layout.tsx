@@ -1,13 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import "nes.css/css/nes.min.css";
-
-// Press Start 2P 是 NES.css 推荐的像素字体
-const pressStart2P = localFont({
-  src: "./fonts/PressStart2P-Regular.ttf",
-  variable: "--font-press-start-2p",
-});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,14 +13,9 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const fusionPixel = localFont({
-  src: "./fonts/fusion-pixel-12px-proportional-zh_hans.ttf",
-  variable: "--font-fusion-pixel",
-});
-
 export const metadata: Metadata = {
-  title: "魔轨纪元 巴啦面板",
-  description: "魔轨纪元信息中心 by巴啦",
+  title: "魔轨列车 (Project Magic Rail)",
+  description: "一款多人联机、以移动列车构筑为核心的生存冒险游戏",
 };
 
 export default function RootLayout({
@@ -36,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" className="dark">
       <body
-        className={`${pressStart2P.variable} ${geistSans.variable} ${geistMono.variable} ${fusionPixel.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
         {children}
       </body>
